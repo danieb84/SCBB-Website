@@ -1,0 +1,91 @@
+/*Yanone*/
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 200;
+  src: local("Yanone Kaffeesatz ExtraLight"), local("YanoneKaffeesatz-ExtraLight"), url("../../yanone/We_iSDqttE3etzfdfhuPRUDqw7A1uQWuQSM-rfHaMOr3rGVtsTkPsbDajuO5ueQw.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Yanone Kaffeesatz Light"), local("YanoneKaffeesatz-Light"), url("../../yanone/We_iSDqttE3etzfdfhuPRbHVephy08vG3A_n649omsL3rGVtsTkPsbDajuO5ueQw.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Yanone Kaffeesatz';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Yanone Kaffeesatz Regular"), local("YanoneKaffeesatz-Regular"), url("../yanone/YDAoLskQQ5MOAgvHUQCcLQa6gm6bS00u2Qn-iPLo1Go.woff") format("woff"); }
+
+/*Oxygen*/
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Oxygen Light"), local("Oxygen-Light"), url("../oxygen/AwBqWF2kjhlybWamaKMPcbO3LdcAZYWl9Si6vvxL-qU.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Oxygen"), local("Oxygen-Regular"), url("../oxygen/eAWT4YudG0otf3rlsJD6zOvvDin1pK8aKteLpeZ5c0A.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Oxygen Bold"), local("Oxygen-Bold"), url("../oxygen/yVHpdQrmTj9Kax1tmFSx2rO3LdcAZYWl9Si6vvxL-qU.woff") format("woff"); }
+
+body {
+  background-color: #011e34;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.84);
+  margin: 0; }
+
+header, footer {
+  width: 100%;
+  background-color: rgba(154, 2, 2, 0.42);
+  position: fixed;
+  z-index: 100; }
+
+header div {
+  width: 65%;
+  margin: 0 auto; }
+
+footer {
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  padding: 10px 0; }
+
+ul {
+  list-style: none; }
+
+nav {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: 200; }
+
+.container {
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  margin: 0; }
+
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between; }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/carousel.css">
+    <link rel="stylesheet" type="text/css" href="../css/modules.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+<body>
+    <header>
+        <div class="flex">
+            <a class="link" href="index.html">
+                <div class="logo">
+                </div>
+            </a>
+            <nav>
+                <ul class="flex">
+                    <li><a class="link" href="index.html">home</a></li>
+                    <li><a class="link" href="">about</a></li>
+                    <li><a class="link" href="profiles.html">profiles</a></li>
+                    <li><a class="link" href="gallery.html">gallery</a></li>
+                    <li><a class="link" href="">contact us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="slide-show" class="container">
+        <div id="myCarousel" class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="active item">
+                    <div class="flex">
+                        <div class="logo">
+                        </div>
+                        <div class="name">
+                            <h1>St. Catherine Brass Band</h1>
+                            <p>Offering Praise Through Music</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container" id="intro">
+                        <div class="flex">
+                            <div class="intro">
+                                <h1 class="heading">Our Band</h1>
+                                <p>
+                                    The St. Catherine Brass Band is a very unique tool for music ministry and we approach it wholeheartedly and seriously. The Band currently consists of approximately 35 members; men and women with a passion for music.
+
+                                    It comprises an array of musical instruments, predominantly brass which includes, Trumpets, Saxophones (Alto, Soprano & Tenor), Baritones, Trombones, Bass Drum, Snares, Cymbals, Keyboards and a Bass Guitar.
+                                    Learn more <a>about us...</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container" id="links">
+                        <h1 class="heading">Meet The Band</h1>
+                        <div class="links flex">
+                            <div class="link profiles">
+                                <a href="profiles.html">
+                                    <div class="icon"></div>
+                                    <p>profiles</p>
+                                </a>
+                            </div>
+                            <div class="link photos">
+                                <a href="gallery.html">
+                                    <div class="icon"></div>
+                                    <p>photos</p>
+                                </a>
+                            </div>
+                            <div class="link videos">
+                                <a href="gallery.html">
+                                    <div class="icon"></div>
+                                    <p>videos</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+    </div>
+    <footer>
+        <div class="copyright">&#169 2013 SCBB. All Rights Reserved. Designed by Danielle Matthews @ <a target="_blank" href="http://www.iriecode.com/">www.iriecode.com</a></div>
+    </footer>
+    <script type="text/javascript">$('.carousel').carousel()</script>
+</body>
+</html>

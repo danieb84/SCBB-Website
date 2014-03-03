@@ -1,0 +1,666 @@
+@import "base";
+
+header {
+  a {
+    @include links(#fff);
+    width: 10%;
+    text-transform: capitalize;
+//    font-size: 1.2em;
+  }
+  .logo {
+    @include circle(50px, rgba(255, 255, 255, 0.71));
+    padding: 10px;
+    background: url("../images/scbb-logo.png") no-repeat center, rgba(255, 255, 255, 0.87);
+    background-size: 80%;
+  }
+  nav {
+    width: 50%;
+  }
+}
+
+footer {
+  .copyright {
+    font-size: 0.8em;
+    a {
+      @include links($sky-blue);
+      font-weight: 400;
+    }
+  }
+}
+
+/****************** HOME PAGE *********************/
+
+/*CONCEPT 1 - COVER*//*
+
+
+#cover {
+  background: url("../images/COVER3.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  z-index: 101;
+  .flex {
+    @include inner-container(65%);
+    position: absolute;
+    top: 22.5%;
+    left: 18.75%;
+    .logo {
+      @include circle(210px, #fff);
+      background: url("../images/scbb-logo.png") no-repeat center 55%, rgba(255, 255, 255, 0.83);
+      background-size: 75%;
+      padding: 20px;
+      position: relative;
+    }
+    .name {
+      position: relative;
+      top: 40px;
+      font-size: 1.5em;
+      h1 {
+        margin: 0;
+      }
+      p {
+        font-size: 1.3em;
+      }
+    }
+  }
+}
+.concept1 {
+  #links {
+    @include box-sizing;
+    .icon, p {
+      @include align-self-center;
+    }
+    > div, h1 {
+      position: relative;
+      top: 170px;
+    }
+    h1 {
+      font-size: 3em;
+      font-weight: 300;
+      @include underline($sky-blue);
+      margin: 0;
+    }
+    > div {
+      @include box-sizing;
+      @include inner-container(50%);
+      margin-top: 50px;
+      :hover {
+        @include scale(1.1);
+        opacity: 1;
+      }
+      p {
+        font-size: 1.5em;
+      }
+      .icon {
+        @include circle(220px, $aqua_blue);
+      }
+      a {
+        @include links(#fff);
+      }
+    }
+    .profiles {
+      .icon {
+        background: url("../images/users.svg") no-repeat center, $aqua_blue;
+        background-size: 60%;
+      }
+    }
+    .photos {
+      .icon {
+        background: url("../images/camera.svg") no-repeat center, $aqua_blue;
+        background-size: 60%;
+      }
+    }
+    .videos {
+      .icon {
+        background: url("../images/youtube.svg") no-repeat center, $aqua_blue;
+        background-size: 60%;
+      }
+    }
+    .profiles, .photos, .videos {
+      @include scale(0.9);
+      opacity: 0.8;
+      @include transform-transition1(opacity, 0.7s);
+    }
+  }
+}
+*/
+
+/*CONCEPT 2 - CAROUSEL*/
+
+#slide-show {
+  position: relative;
+}
+
+#slide
+{
+  border-radius: 15px;
+  border:solid rgba(71,84,108,0.4) 10px;
+}
+
+.slideshow
+{
+  position: relative;
+}
+
+.carousel-control
+{
+  top:50%;
+}
+
+.next, .prev {
+  float:left;
+  position: absolute;
+  top:45%;
+  opacity:0.7;
+}
+
+.next
+{
+  left:78%;
+}
+
+.prev
+{
+  left:17.8%;
+}
+
+.next a:hover, .prev a:hover
+{
+  opacity:0.7;
+}
+
+#myCarousel
+{
+  @include inner-container(85%);
+  position: relative;
+  .carousel-inner {
+    .item {
+      width: 100%;
+      .flex {
+        height: 650px;
+      }
+    }
+    .item:nth-child(1) {
+      background: url("../images/COVER4.jpg") no-repeat center;
+      background-size: cover;
+      .flex {
+        @include inner-container(72%);
+        .logo {
+          @include circle(210px, #fff);
+          background: url("../images/scbb-logo.png") no-repeat center 55%, rgb(255, 255, 255);
+          background-size: 75%;
+          padding: 20px;
+          position: relative;
+        }
+        .name {
+          font-size: 1.4em;
+          p {
+            font-size: 1.5em;
+          }
+        }
+        .logo, .name {
+          @include align-self-center;
+        }
+      }
+    }
+    .item:nth-child(2) {
+      #intro {
+        background: url("../images/slide2-bg.jpg") no-repeat center;
+        background-size: cover;
+        position: relative;
+        .intro {
+          position: relative;
+          margin: auto;
+          @include align-self-center;
+          @include inner-container(50%);
+          background: rgba(255, 255, 255, 0.9);
+          color: $navy_blue;
+          padding: 5px 40px;
+          box-shadow: 2px 2px 10px rgba(21, 21, 21, 0.80);
+          font-size: 1.2em;
+          @include box-sizing;
+          h1 {
+            @include underline($aqua_blue);
+            text-align: left;
+            color: $deep_red;
+          }
+          p {
+            line-height: 1.7em;
+            text-align: justify;
+          }
+          a {
+            @include links($sky-blue);
+          }
+        }
+      }
+    }
+    .item:nth-child(3) {
+      background: #FFFFFF;
+      #links {
+        @include box-sizing;
+        position: relative;
+        top: 110px;
+        .icon, p {
+          @include align-self-center;
+        }
+        > div, h1 {
+          position: relative;
+        }
+        h1 {
+          font-size: 3em;
+          font-weight: 300;
+          color: $navy_blue;
+          @include underline($sky-blue);
+          margin: 0;
+          @include inner-container(70%);
+        }
+        > div {
+          @include box-sizing;
+          @include inner-container(70%);
+          :hover {
+            @include scale(1);
+            opacity: 1;
+            a {
+              color: $sky-blue;
+            }
+          }
+          p {
+            font-size: 1.8em;
+          }
+          .icon {
+            @include circle(270px, $deep_red);
+          }
+          a {
+            @include links($navy_blue);
+            @include transition1(color, 0.7s)
+          }
+        }
+        .profiles {
+          .icon {
+            background: url("../images/users.svg") no-repeat center, $deep_red;
+            background-size: 60%;
+          }
+        }
+        .photos {
+          .icon {
+            background: url("../images/camera.svg") no-repeat center, $deep_red;
+            background-size: 60%;
+          }
+        }
+        .videos {
+          .icon {
+            background: url("../images/youtube.svg") no-repeat center, $deep_red;
+            background-size: 60%;
+          }
+        }
+        .profiles, .photos, .videos {
+          @include scale(0.8);
+          opacity: 1;
+          @include transition1(all, 0.7s);
+        }
+      }
+    }
+  }
+}
+
+/**********************/
+
+/****************** PROFILES PAGE *********************/
+
+.main {
+  position: relative;
+  margin: 35px auto 30px;
+  #myCarousel2 {
+    text-align: center;
+    @include inner-container(75%);
+  }
+  #myCarousel2 .item {
+    background: rgba(2, 104, 192, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  #profiles_cover
+  {
+    background: url("../images/profiles-cover.jpg") no-repeat bottom;
+    background-size: 70%;
+    margin:0 auto;
+    height:525px;
+    z-index: 10;
+    border-radius:10px;
+    overflow:hidden;
+  }
+
+  #profiles_cover .intro {
+    text-align: center;
+    margin: 0 auto 0 auto;
+  }
+
+  #profiles_cover .grid_7 {
+    float: none;
+  }
+
+  #profiles_cover .intro h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    color:#C43C35;
+    margin-top: 0px;
+  }
+
+  #profiles_cover .intro p {
+    line-height: 1.3em;
+    font-weight: 300;
+    color: $sky-blue;
+  }
+
+  /*Sections*/
+
+  #director, #trumpet, #trombone, #saxophone, #percussion, #keyboard
+  {
+    min-height:525px;
+    margin: 0 auto 20px auto;
+    z-index: 10;
+    padding-bottom:12px;
+    border-radius: 4px;
+  }
+
+  #myCarousel2 .title
+  {
+    color:#C43C35;
+    text-align: left;
+    margin-left: 30px;
+    @include underline($sky-blue);
+    font-weight: 300;
+    font-size: 2.5em;
+  }
+
+  #tuba, #bass
+  {
+    padding-top:10px;
+    width: 100%;
+  }
+
+  #director img {
+    margin-left: 20px;
+  }
+
+  .director_info
+  {
+    font-size:2em;
+    margin-top: 50px;
+  }
+
+  .director_info h1
+  {
+    font-size: 1.5em;
+  }
+
+  .name
+  {
+    text-align:center;
+  }
+
+  #myCarousel2 .grid_12 {
+    float: none;
+    text-align: center;
+  }
+
+  #myCarousel2 .carousel-indicators {
+    position: relative;
+    z-index: 0;
+    margin: 0 auto;
+    list-style: none;
+    height: 25px;
+    top: 0;
+    right: 0;
+    width: auto;
+  }
+
+  #myCarousel2 .carousel-indicators li {
+    display: inline;
+    float: none;
+    padding: 10px 7px;
+    margin-right: 1px;
+    margin-left: 0;
+    width:auto;
+    height:auto;
+    text-indent:0;
+//    background-color:rgba(7, 80, 142, 1);
+    background-color:rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    cursor:pointer;
+    color:#FFFFFF;
+    opacity:1;
+    font-size:1em ;
+    font-weight:300;
+    text-align: center;
+  }
+
+  #myCarousel2 .carousel-indicators .active {
+    background-color: #fff;
+    color:#07508E;
+    opacity:1;
+  }
+
+  /*LIGHT BOX*/
+  .imageRow .single a {
+    float: left;
+    display: block;
+    background:none;
+    line-height: 1em;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+
+  #myCarousel2 .imageRow .set img {
+    width: 80%;
+  }
+
+  /* line 335, ../sass/screen.sass */
+  .imageRow .set img
+  {
+    border: rgba(255, 255, 255, 0.2) solid 8px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 25px auto 10px;
+    -webkit-transition: border 0.4s linear;
+    @include box-sizing;
+  }
+  .imageRow .single a img:hover {
+    border: rgba(255, 255, 255, 0.82) solid 8px;
+  }
+  /* line 337, ../sass/screen.sass */
+  .imageRow .set {
+    background: none;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+
+  /* line 343, ../sass/screen.sass */
+  .imageRow .set:hover {
+    background: none;
+  }
+  /* line 346, ../sass/screen.sass */
+  .imageRow .set .single a {
+    background: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-right: 0;
+  }
+
+  /* line 355, ../sass/screen.sass */
+  .imageRow .set .single.first a {
+    -moz-border-radius-topleft: 0px;
+    -webkit-border-top-left-radius: 0px;
+    -ms-border-top-left-radius: 0px;
+    -o-border-top-left-radius: 0px;
+    border-top-left-radius: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -ms-border-bottom-left-radius: 0px;
+    -o-border-bottom-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  /* line 358, ../sass/screen.sass */
+  .imageRow .set .single.last a {
+    -moz-border-radius-topright: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -ms-border-top-right-radius: 0px;
+    -o-border-top-right-radius: 0px;
+    border-top-right-radius: 0px;
+    -moz-border-radius-bottomright: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -ms-border-bottom-right-radius: 0px;
+    -o-border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+/****************** GALLERY PAGE *********************/
+
+.main {
+  .photo-gallery
+  {
+    @include inner-container(75%);
+    text-align: center;
+    #cover {
+      background: url("../images/slide2-bg.jpg") no-repeat center;
+      padding-top:90px;
+      > div {
+        @include align-self-center;
+        margin: auto;
+      }
+    }
+  }
+
+  .photo-gallery .imageRow
+  {
+    margin: 40px auto;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .photo-gallery .imageRow .set
+  {
+    margin:0 auto;
+  }
+
+  .gallery-cover #h1
+  {
+    font-size: 5em;
+    color:#01CCFF;
+    margin-bottom:20px;
+  }
+
+  .gallery-cover p
+  {
+    margin:0 auto 10px auto;
+    color: #ffffff;
+    font-size: 1.2em;
+  }
+
+  .gallery-links {
+    margin: 100px auto 50px;
+    text-align: center;
+
+  }
+
+  .gallery-links a p, .top-link {
+    text-align: center;
+    padding: 60px 0;
+    font-size: 2em;
+    color: inherit;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    -webkit-transition: all 0.3s linear;
+  }
+  a, .top-link {
+    @include links(#012947);
+  }
+
+  .gallery-links a p:hover, .top-link:hover {
+    background: rgba(255, 255, 255, 1);
+  }
+
+  .gallery-links a p span {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    top: 10px;
+    padding-left: 10px;
+  }
+  .photos-link p span {
+    background: url("../images/camera-navyblue.svg") no-repeat center;
+    background-size: 100%;
+  }
+  .videos-link p span {
+    background: url("../images/youtube-navyblue.svg") no-repeat center;
+    background-size: 100%;
+  }
+
+  .top-link
+  {
+    margin: auto;
+    padding: 12px;
+    width: 50px;
+    font-size: 1.7em;
+  }
+
+  .set {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #photos {
+    padding-top: 40px;
+    img {
+      width: 100%;
+    }
+    .random_photos {
+      position: relative;
+      left: 3.25%;
+    }
+  }
+
+  #photos h1
+  {
+    font-size: 3.5em;
+    padding-top: 35px;
+    margin: 0 auto;
+    position: relative;
+    left: 3.25%;
+    font-weight: 300;
+    text-align: left;
+    color: #9A0202;
+    @include underline($sky-blue);
+  }
+}
